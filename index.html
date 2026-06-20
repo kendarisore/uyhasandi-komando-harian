@@ -1,0 +1,108 @@
+# uyhasandi-komando-harian
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komando Harian</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="theme-color" content="#0f172a">
+</head>
+<body>
+
+<header class="header">
+    <h1>🚀 Komando Harian</h1>
+    <p>Fokus pada yang paling penting hari ini</p>
+</header>
+
+<section class="card">
+    <h2>Kondisi Hari Ini</h2>
+
+    <label>Energi</label>
+    <select id="energy">
+        <option value="tinggi">Tinggi</option>
+        <option value="sedang">Sedang</option>
+        <option value="rendah">Rendah</option>
+    </select>
+
+    <label>Waktu Tersedia</label>
+    <select id="time">
+        <option value="full">Full Day</option>
+        <option value="8">4 - 8 Jam</option>
+        <option value="4">2 - 4 Jam</option>
+        <option value="2">< 2 Jam</option>
+    </select>
+
+    <button onclick="saveCondition()">
+        Simpan Kondisi
+    </button>
+</section>
+
+<section class="card">
+    <h2>Kegiatan Rutin</h2>
+
+    <div id="routineList"></div>
+</section>
+
+<section class="card">
+    <h2>Tambah Kegiatan Hari Ini</h2>
+
+    <input
+        type="text"
+        id="taskInput"
+        placeholder="Contoh: Follow up 20 calon pembeli"
+    >
+
+    <label>Dampak</label>
+    <select id="impact">
+        <option value="5">Sangat Tinggi</option>
+        <option value="4">Tinggi</option>
+        <option value="3">Sedang</option>
+        <option value="2">Rendah</option>
+        <option value="1">Sangat Rendah</option>
+    </select>
+
+    <label>Deadline</label>
+    <select id="deadline">
+        <option value="5">Hari Ini</option>
+        <option value="4">Besok</option>
+        <option value="3">Minggu Ini</option>
+        <option value="1">Tidak Ada</option>
+    </select>
+
+    <button onclick="addTask()">
+        Tambah Kegiatan
+    </button>
+</section>
+
+<section class="card">
+    <h2>🔥 Prioritas Utama</h2>
+    <div id="priorityList"></div>
+</section>
+
+<section class="card">
+    <h2>📋 Semua Kegiatan</h2>
+    <div id="taskList"></div>
+</section>
+
+<section class="card">
+    <h2>📈 Skor Produktivitas</h2>
+
+    <div class="score-box">
+        <span id="productivityScore">0%</span>
+    </div>
+</section>
+
+<footer>
+    <small>
+        Komando Harian v1.0
+    </small>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
